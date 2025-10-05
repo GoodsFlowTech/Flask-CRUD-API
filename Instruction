@@ -1,0 +1,58 @@
+1️⃣ Download & Prepare
+•	Download the project folder flask_crud_api.zip and unzip it to your computer.
+
+2️⃣ Open Terminal
+•	Open VS Code terminal or Command Prompt.
+•	Navigate to the project folder:
+cd "C:\path\to\flask_crud_api"
+Replace "C:\path\to\" with your actual folder location.
+
+3️⃣ (Optional) Create Virtual Environment
+•	Recommended to avoid conflicts with other Python packages:
+python -m venv venv
+.\venv\Scripts\activate
+•	Terminal should show (venv) at the start.
+•	If PowerShell blocks activation:
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+.\venv\Scripts\activate
+
+4️⃣ Install Dependencies
+•	Install all required packages using pip:
+pip install -r requirements.txt
+•	This installs Flask, Flask-RESTful, and Flask-SQLAlchemy.
+
+5️⃣ Run the Flask API
+•	Start the server:
+python app.py
+•	The server will run at:
+http://127.0.0.1:5000/
+
+6️⃣ Test Endpoints
+You can test the API endpoints using Postman, curl, or any REST client.
+Method	Endpoint	Description
+POST	/items	Create a new item
+GET	/items	Get all items
+GET	/items/<id>	Get single item by ID
+PUT	/items/<id>	Update item by ID
+DELETE	/items/<id>	Delete item by ID
+Example curl commands:
+# Create item
+curl -X POST -H "Content-Type: application/json" -d '{"name":"Book","description":"Python Book"}' http://127.0.0.1:5000/items
+
+# Get all items
+curl http://127.0.0.1:5000/items
+
+# Update item
+curl -X PUT -H "Content-Type: application/json" -d '{"name":"Notebook"}' http://127.0.0.1:5000/items/1
+
+# Delete item
+curl -X DELETE http://127.0.0.1:5000/items/1
+
+7️⃣ Stop the Server
+•	When finished, press CTRL + C in the terminal to stop the Flask server.
+
+8️⃣ Notes
+•	Always run python app.py from the terminal, not inside the Python >>> prompt.
+•	Using a virtual environment is optional but recommended to avoid dependency conflicts.
+•	You can view all items, create, update, or delete items using Postman or curl commands.
+
