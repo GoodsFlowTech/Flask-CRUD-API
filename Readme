@@ -1,0 +1,19 @@
+# 🗂 Flask CRUD REST API
+
+## 📖 Project Overview
+This project demonstrates a simple **REST API** built using **Flask** and **SQLite**.  
+The API allows users to **Create, Read, Update, and Delete (CRUD)** items in a database.  
+Each item has a `name` and `description`. This project showcases the ability to develop a basic backend API using Python and Flask.
+
+---
+
+## 🧰 Tech Used
+- Python 3.x  
+- Flask  
+- Flask-RESTful  
+- Flask-SQLAlchemy  
+- SQLite (for database)
+
+---
+
+## 📁 Project Structure
